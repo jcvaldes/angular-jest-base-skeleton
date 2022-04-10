@@ -1,14 +1,16 @@
 {
   "name": "angular-jest-skeleton",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve -o",
+    "dev": "concurrently \"npm run mock\" \"ng serve -o\"",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "jest",
-    "test:watch": "jest --watchAll",
-    "test:coverage": "jest --coverage"
+    "test:watch": "ng test --watchAll",
+    "test:coverage": "ng test -code-coverage",
+    "mock": "json-server db.json"
   },
   "private": true,
   "dependencies": {
@@ -21,6 +23,7 @@
     "@angular/platform-browser-dynamic": "~13.3.0",
     "@angular/router": "~13.3.0",
     "rxjs": "~7.5.0",
+    "sweetalert2": "^11.4.7",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },
@@ -32,6 +35,7 @@
     "@briebug/jest-schematic": "^4.0.0",
     "@types/jest": "latest",
     "@types/node": "^12.11.1",
+    "concurrently": "^7.0.0",
     "jest": "latest",
     "typescript": "~4.6.2"
   }
