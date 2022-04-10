@@ -8,8 +8,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "jest",
-    "test:watch": "ng test --watchAll",
-    "test:coverage": "ng test -code-coverage",
+    "test:watch": "jest --watchAll",
+    "test:coverage": "jest --coverage",
     "mock": "json-server db.json"
   },
   "private": true,
