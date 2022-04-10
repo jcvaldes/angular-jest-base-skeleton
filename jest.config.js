@@ -4,6 +4,6 @@ module.exports = {
   },
   preset: "jest-preset-angular",
   setupFilesAfterEnv: ["<rootDir>/setup-jest.ts"],
-  collectCoverages: true,
-  coverageDirectory: "coverage/dist",
+  collectCoverage: true,
+  coverageDirectory: "coverage/book-list-app",
 };
